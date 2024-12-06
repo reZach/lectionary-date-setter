@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf8" />
+    <title>test</title>
+</head>
+
+<body>
+    lectionary
+    <script>
+        navigator.bluetooth.requestDevice({
+            filters: [{
+                name: "LECTIONARYFRAME"
+            }],
+        })
+        .then(device => { 
+            alert(JSON.stringify(device));
+
+         })
+        .catch(error => { console.error(error); });
+    </script>
+
+
+</body>
