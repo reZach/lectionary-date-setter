@@ -6,18 +6,20 @@
 </head>
 
 <body>
-    lectionary
+    <button class="js-button">lectionary</button>
     <script>
-        navigator.bluetooth.requestDevice({
-            filters: [{
-                name: "LECTIONARYFRAME"
-            }],
-        })
-            .then(device => {
-                alert(JSON.stringify(device));
-
+        document.querySelector(".js-button")[0].addEventListener("pointerup", function (event) {
+            navigator.bluetooth.requestDevice({
+                filters: [{
+                    name: "LECTIONARYFRAME"
+                }],
             })
-            .catch(error => { alert(error) });
+                .then(device => {
+                    alert(JSON.stringify(device));
+
+                })
+                .catch(error => { alert(error) });
+        });        
     </script>
 
 
