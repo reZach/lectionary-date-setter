@@ -8,7 +8,7 @@
 <body>
     <button class="js-button">lectionary</button>
     <script>
-        document.querySelector(".js-button")[0].addEventListener("pointerup", function (event) {
+        document.querySelector(".js-button").addEventListener("pointerup", function (event) {
             navigator.bluetooth.requestDevice({
                 filters: [{
                     name: "LECTIONARYFRAME"
